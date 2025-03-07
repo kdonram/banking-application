@@ -17,4 +17,19 @@ public class BankAccount {
         this.accountType = accountType;
         this.balance = 0;
     }
+
+    public void depositCash(int amount){
+        this.balance += amount;
+        System.out.println("Deposit is successful.");
+    }
+
+    public void withdrawCash(int amount){
+        if (this.balance < amount) {
+            System.out.println("The bank balance is low.");
+            return;
+        }
+        this.balance -= amount;
+        System.out.println("Withdrawal is successful.");
+    }
+
 }
